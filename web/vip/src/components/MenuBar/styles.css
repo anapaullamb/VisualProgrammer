@@ -1,0 +1,18 @@
+.navbar,
+.navbar-default {
+  background-color: var(--color-nav) !important; /* override background image gradient w/ flat color */
+}
+
+.buttons-container a {
+  height: 2.9rem;
+  font-family: Poppins;
+  font-style: normal;
+  text-decoration: none;
+  color: var(--color-button-text);
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+.buttons-container a:hover {
+  color: var(--color-button-text-hover);
+  text-decoration: none;
+}
