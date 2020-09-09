@@ -1,0 +1,73 @@
+.containerCadastro {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: 75%;
+  grid-template-areas: "title" "form";
+}
+.containerCadastro-title {
+  grid-area: title;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+}
+.container-form {
+  grid-area: form;
+}
+.containerCadastro-title h1 {
+  font-family: Montserrat;
+  font-weight: 800;
+  font-size: 3.9rem;
+  line-height: 37px;
+  font-style: normal;
+  color: var(--color-title-in-primary);
+}
+.containerCadastro-title p {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
+  color: var(--color-text-in-primary);
+}
+.container-form button {
+  background: var(--color-secundary);
+  padding: 15px;
+  width: 100%;
+  border: none;
+  margin-top: 50px;
+  border-radius: 25px;
+  text-decoration: none;
+  color: var(--color-button-text);
+
+  transition: background-color 0.2s;
+}
+.container-form button:hover {
+  background: var(--color-secundary-dark);
+  box-shadow: 4px 10px 14px rgba(0, 0, 0, 0.2);
+}
+
+@media (min-width: 800px) {
+  .containerCadastro-title {
+    border-left: 3px solid var(--color-title-in-primary);
+    padding-left: 3rem;
+  }
+  .containerCadastro-title h1 {
+    font-size: 4.4vw;
+    line-height: 7.6rem;
+  }
+  .containerCadastro-title p {
+    font-size: 2.4rem;
+    line-height: 2rem;
+  }
+  .containerCadastro {
+    justify-content: flex-start;
+    display: grid;
+    grid-template-columns: 25% 40vw;
+    grid-template-areas: "title form";
+  }
+  .container-form {
+    position: relative;
+    right: -14vw;
+  }
+}

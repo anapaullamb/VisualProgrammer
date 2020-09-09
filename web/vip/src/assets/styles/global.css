@@ -5,8 +5,9 @@
   --color-primary: #8257e5;
   --color-primary-dark: #774dd6;
   --color-primary-darker: #6842c2;
-  --color-secundary: #04d361;
-  --color-secundary-dark: #04bf58;
+  --color-secundary: #eda67e;
+  --color-secundary-dark: #f1884b;
+  --color-secundary-light: #f2c7ae;
   --color-title-in-primary: #ffffff;
   --color-text-in-primary: #bdd0db;
   --color-text-title: #32264d;
@@ -14,8 +15,7 @@
   --color-text-base: #6a6180;
   --color-line-in-white: #e6e6f0;
   --color-input-background: #f8f8fc;
-  --color-button-text: #f2c7ae;
-  --color-button-text-hover: #ffbd97;
+  --color-button-text: #eeeeee;
   --color-box-base: #ffffff;
   --color-nav: rgba(31, 13, 13, 0.04);
   font-size: 60%;

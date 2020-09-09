@@ -1,0 +1,75 @@
+.containerLogin {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 75%;
+  grid-template-areas: "title" "form";
+}
+.containerLogin-title {
+  grid-area: title;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+}
+.containerLogin-form {
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  grid-area: form;
+}
+.containerLogin-title h1 {
+  font-family: Montserrat;
+  font-weight: 800;
+  font-size: 3.9rem;
+  line-height: 37px;
+  font-style: normal;
+  color: var(--color-title-in-primary);
+}
+.containerLogin-title p {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
+  color: var(--color-text-in-primary);
+}
+.containerLogin-form button {
+  background: var(--color-secundary);
+  padding: 15px;
+  width: 100%;
+  border: none;
+  border-radius: 25px;
+  text-decoration: none;
+  color: var(--color-button-text);
+  margin-top: 30px;
+
+  transition: background-color 0.2s;
+}
+.containerLogin-form button:hover {
+  background: var(--color-secundary-dark);
+  box-shadow: 4px 10px 14px rgba(0, 0, 0, 0.2);
+}
+
+@media (min-width: 800px) {
+  .containerLogin-title {
+    border-left: 3px solid var(--color-title-in-primary);
+    padding-left: 3rem;
+  }
+  .containerLogin-title h1 {
+    font-size: 4.4vw;
+    line-height: 7.6rem;
+  }
+  .containerLogin-title p {
+    font-size: 2.4rem;
+    line-height: 2rem;
+  }
+  .containerLogin {
+    justify-content: flex-start;
+    display: grid;
+    grid-template-columns: 25% 40vw;
+    grid-template-areas: "title form";
+  }
+  .containerLogin-form {
+    position: relative;
+    right: -14vw;
+  }
+}

@@ -1,0 +1,46 @@
+.navbar,
+.navbar-default {
+  background-color: rgba(255, 255, 255, 0.04) !important; /* override background image gradient w/ flat color */
+}
+.buttons-menubar {
+  height: 9%;
+}
+.buttons-menubar a {
+  font-family: Poppins;
+  font-style: normal;
+  text-decoration: none;
+  color: var(--color-secundary-light);
+  font-weight: 600;
+  font-size: 4.7vw;
+  transition: background-color 0.2s;
+}
+.buttons-menubar a:hover {
+  color: var(--color-secundary);
+  text-decoration: none;
+}
+.buttons-menubar a:last-child {
+  margin-left: 2vw;
+  margin-right: 1vw;
+}
+.header img {
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  right: 0;
+  height: 100%;
+}
+.page-header .buttons-menubar img {
+  width: 25%;
+  transform: scaleX(-1);
+  margin-left: 20px;
+}
+@media (min-width: 700px) {
+  .header img {
+    height: 100%;
+  }
+}
+@media (min-width: 650px) {
+  .buttons-menubar a {
+    font-size: 2.3rem;
+  }
+}

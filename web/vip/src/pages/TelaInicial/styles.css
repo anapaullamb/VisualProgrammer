@@ -1,4 +1,16 @@
-.title {
+.container {
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bordaLateral {
+  border-left: 3px solid var(--color-title-in-primary);
+  padding-left: 3rem;
+}
+.container-title h1 {
   font-family: Montserrat;
   font-weight: 800;
   font-size: 3rem;
@@ -6,11 +18,7 @@
   font-style: normal;
   color: var(--color-title-in-primary);
 }
-.bordaLateral {
-  border-left: 3px solid var(--color-title-in-primary);
-  padding-left: 3rem;
-}
-.subtitle {
+.container-title p {
   font-family: Poppins;
   font-style: normal;
   font-weight: normal;
@@ -18,50 +26,74 @@
   line-height: 21px;
   color: var(--color-text-in-primary);
 }
-.waves {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-}
-.buttons-container {
-  display: flex;
-  justify-content: center;
-  margin: 3.2rem 0;
-}
-
-.buttons-container a {
-  width: 30rem;
-  height: 10.4rem;
-  border-radius: 0.8rem;
-  margin-right: 1.6rem;
-  font: 700 2rem;
-
-  display: flex;
+.container .buttons-container {
+  display: grid;
   align-items: center;
-  justify-content: center;
+  grid-template-columns: 100px 100px;
+  grid-template-rows: 100px 50px;
+  grid-template-areas:
+    "cadastrar cadastrar"
+    "logar logar";
+}
 
+.container .buttons-container a {
+  background: var(--color-secundary);
+  padding: 15px;
+  border-radius: 25px;
   text-decoration: none;
   color: var(--color-button-text);
 
   transition: background-color 0.2s;
 }
-
-.buttons-container a:first-child {
-  margin-right: 1.6rem;
+.container .buttons-container a:hover {
+  background: var(--color-secundary-dark);
+  box-shadow: 4px 10px 14px rgba(0, 0, 0, 0.2);
 }
-.buttons-container a image {
-  width: 4rem;
+
+.container .buttons-container .logar a {
+  background: none;
+  border: 1px solid var(--color-secundary);
+}
+.container .buttons-container .logar {
+  grid-area: logar;
+}
+.container .buttons-container .logar a:hover {
+  border: 1px solid var(--color-secundary-dark);
+}
+.container .buttons-container .cadastrar {
+  grid-area: cadastrar;
+}
+
+.container .buttons-container .cadastrar img {
+  width: 15%;
+  margin-left: 20px;
 }
 @media (min-width: 700px) {
-  .title {
+  .container-title h1 {
     font-size: 7rem;
     line-height: 7.6rem;
   }
   .bordaLateral {
     border-left: 5px solid var(--color-title-in-primary);
   }
-  .subtitle {
+  .container-title p {
     font-size: 2.4rem;
     line-height: 2.8rem;
+  }
+  .container .buttons-container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: "logar cadastrar";
+  }
+  .container-title {
+    position: relative;
+    left: -8vw;
+    top: -2vw;
+  }
+}
+@media (min-width: 1215px) {
+  .container-title {
+    position: relative;
+    left: -20vw;
   }
 }

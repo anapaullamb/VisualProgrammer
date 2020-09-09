@@ -1,0 +1,12 @@
+.footer img {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+}
+@media (min-width: 700px) {
+  .footer img {
+    width: 58%;
+  }
+}

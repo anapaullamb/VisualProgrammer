@@ -8,8 +8,8 @@ function Routes() {
   return (
     <BrowserRouter>
       <Route path="/" exact component={TelaInicial} />
-      <Route path="/cadastrar" exact component={TelaLogin} />
-      <Route path="/logar" exact component={TelaCadastro} />
+      <Route path="/cadastrar" exact component={TelaCadastro} />
+      <Route path="/logar" exact component={TelaLogin} />
     </BrowserRouter>
   );
 }
