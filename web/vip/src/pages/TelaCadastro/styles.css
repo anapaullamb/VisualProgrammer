@@ -4,6 +4,9 @@
   justify-content: center;
   grid-template-columns: 75%;
   grid-template-areas: "title" "form";
+  padding-right: 10vw;
+  padding-left: 10vw;
+  padding-bottom: 8vw;
 }
 .containerCadastro-title {
   grid-area: title;
@@ -31,19 +34,20 @@
   color: var(--color-text-in-primary);
 }
 .container-form button {
-  background: var(--color-secundary);
+  background: var(--color-tertiary);
   padding: 15px;
   width: 100%;
   border: none;
   margin-top: 50px;
   border-radius: 25px;
   text-decoration: none;
-  color: var(--color-button-text);
+  color: var(--color-line-in-white);
 
   transition: background-color 0.2s;
 }
 .container-form button:hover {
-  background: var(--color-secundary-dark);
+  width: 100%;
+  background: var(--color-tertiary-dark);
   box-shadow: 4px 10px 14px rgba(0, 0, 0, 0.2);
 }
 

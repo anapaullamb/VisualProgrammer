@@ -5,17 +5,20 @@
 .buttons-menubar {
   height: 9%;
 }
+.page-header {
+  height: 64px;
+}
 .buttons-menubar a {
   font-family: Poppins;
   font-style: normal;
   text-decoration: none;
-  color: var(--color-secundary-light);
+  color: var(--color-secondary);
   font-weight: 600;
   font-size: 4.7vw;
   transition: background-color 0.2s;
 }
 .buttons-menubar a:hover {
-  color: var(--color-secundary);
+  color: var(--color-secondary-dark);
   text-decoration: none;
 }
 .buttons-menubar a:last-child {

@@ -5,8 +5,6 @@
   z-index: -1;
   width: 100%;
 }
-@media (min-width: 700px) {
-  .footer img {
-    width: 58%;
-  }
+.footer {
+  width: 100%;
 }

@@ -1,32 +1,69 @@
-.container {
-  width: 100vw;
-  height: 100vh;
+.main-container {
+  min-height: 100vh;
+  position: relative;
+}
+.wave {
+  width: 656px;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.wave-img {
+  bottom: -8px;
+  position: absolute;
+  left: 50%;
+  width: 850px;
+  transform: translateX(-50%);
+}
+.wave-img img {
+  display: block;
+  width: 100%;
+} /* Vector */
 
-  display: flex;
-  justify-content: center;
+section.home,
+section.sobre,
+section.contato {
+  position: relative;
   align-items: center;
+  display: flex;
+  z-index: 4;
+  width: 100%;
+  height: 640px;
+}
+section.sobre {
+  background: var(--color-background-secondary);
+}
+section.contato {
+  background: linear-gradient(357.06deg, #78cfde 2.67%, #78cfde 2.68%, #45818e 94.99%);
 }
 .bordaLateral {
   border-left: 3px solid var(--color-title-in-primary);
   padding-left: 3rem;
 }
+.container-title {
+  padding-right: 10vw;
+  padding-left: 10vw;
+}
 .container-title h1 {
   font-family: Montserrat;
+  font-size: 45px;
+  letter-spacing: -1px;
   font-weight: 800;
-  font-size: 3rem;
-  line-height: 37px;
-  font-style: normal;
   color: var(--color-title-in-primary);
 }
 .container-title p {
   font-family: Poppins;
-  font-style: normal;
-  font-weight: normal;
+  width: 100%;
+  max-width: 300px;
   font-size: 14px;
   line-height: 21px;
   color: var(--color-text-in-primary);
 }
-.container .buttons-container {
+
+.main-container .buttons-container {
   display: grid;
   align-items: center;
   grid-template-columns: 100px 100px;
@@ -36,64 +73,78 @@
     "logar logar";
 }
 
-.container .buttons-container a {
-  background: var(--color-secundary);
+.main-container .buttons-container a {
+  background: var(--color-tertiary);
   padding: 15px;
   border-radius: 25px;
   text-decoration: none;
-  color: var(--color-button-text);
+  color: var(--color-line-in-white);
 
   transition: background-color 0.2s;
 }
-.container .buttons-container a:hover {
-  background: var(--color-secundary-dark);
+.main-container .buttons-container a:hover {
+  background: var(--color-tertiary-dark);
   box-shadow: 4px 10px 14px rgba(0, 0, 0, 0.2);
 }
 
-.container .buttons-container .logar a {
+.main-container .buttons-container .logar a {
   background: none;
-  border: 1px solid var(--color-secundary);
+  border: 1px solid var(--color-tertiary-dark);
 }
-.container .buttons-container .logar {
+.main-container .buttons-container .logar a:hover {
+  border: 1px solid var(--color-tertiary-dark);
+}
+.main-container .buttons-container .logar {
   grid-area: logar;
 }
-.container .buttons-container .logar a:hover {
-  border: 1px solid var(--color-secundary-dark);
-}
-.container .buttons-container .cadastrar {
+.main-container .buttons-container .cadastrar {
   grid-area: cadastrar;
 }
 
-.container .buttons-container .cadastrar img {
+.main-container .buttons-container .cadastrar img {
   width: 15%;
   margin-left: 20px;
 }
-@media (min-width: 700px) {
+.main-container-sobre {
+  background: var(--color-background-secondary);
+}
+@media (min-width: 768px) {
+  .wave .wave-img {
+    bottom: -13px;
+    width: 992px;
+  }
   .container-title h1 {
-    font-size: 7rem;
+    font-size: 80px;
     line-height: 7.6rem;
   }
   .bordaLateral {
     border-left: 5px solid var(--color-title-in-primary);
   }
   .container-title p {
-    font-size: 2.4rem;
+    max-width: 100%;
+    margin: 30px auto 0;
+    font-size: 18px;
     line-height: 2.8rem;
   }
-  .container .buttons-container {
+  .main-container .buttons-container {
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-areas: "logar cadastrar";
   }
-  .container-title {
-    position: relative;
-    left: -8vw;
-    top: -2vw;
+  section.home {
+    height: 592px;
   }
 }
-@media (min-width: 1215px) {
-  .container-title {
-    position: relative;
-    left: -20vw;
+@media (min-width: 992px) {
+  .wave {
+    width: 100%;
+    height: 100%;
+  }
+  .wave .wave-img {
+    bottom: -50px;
+    width: 100%;
+  }
+  section.home {
+    height: 710px;
   }
 }

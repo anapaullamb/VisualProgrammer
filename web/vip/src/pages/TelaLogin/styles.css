@@ -3,6 +3,9 @@
   align-items: center;
   grid-template-columns: 75%;
   grid-template-areas: "title" "form";
+  padding-right: 10vw;
+  padding-left: 10vw;
+  padding-bottom: 8vw;
 }
 .containerLogin-title {
   grid-area: title;
@@ -33,19 +36,19 @@
   color: var(--color-text-in-primary);
 }
 .containerLogin-form button {
-  background: var(--color-secundary);
+  background: var(--color-tertiary);
   padding: 15px;
   width: 100%;
   border: none;
   border-radius: 25px;
   text-decoration: none;
-  color: var(--color-button-text);
+  color: var(--color-line-in-white);
   margin-top: 30px;
 
   transition: background-color 0.2s;
 }
 .containerLogin-form button:hover {
-  background: var(--color-secundary-dark);
+  background: var(--color-tertiary-dark);
   box-shadow: 4px 10px 14px rgba(0, 0, 0, 0.2);
 }
 
